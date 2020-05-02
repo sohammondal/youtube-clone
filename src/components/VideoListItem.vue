@@ -1,5 +1,10 @@
 <template>
-  <li>{{ video.snippet.title }}</li>
+  <li class="list-group-item media">
+    <img class="mr-3" :src="thumbnailUrl" alt />
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">{{ video.snippet.title }}</h5>
+    </div>
+  </li>
 </template>
 
 <script>
@@ -7,6 +12,21 @@ export default {
   name: "VideoListItem",
   props: {
     video: Object
+  },
+  computed: {
+    thumbnailUrl: function() {
+      return this.video.snippet.thumbnails.default.url;
+    }
   }
 };
 </script>
+
+<style scoped>
+li {
+  display: flex;
+  cursor: pointer;
+}
+li:hover {
+  background-color: #eee;
+}
+</style>

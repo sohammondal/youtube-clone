@@ -35,7 +35,7 @@ export default {
             }
           }
         );
-        console.log(data.items);
+        console.log(data.items[0].snippet);
         this.videos = data.items;
       } catch (error) {
         console.error(error);

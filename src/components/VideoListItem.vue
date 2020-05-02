@@ -1,5 +1,5 @@
 <template>
-  <li class="list-group-item media" @click="onVideoSelect">
+  <li class="list-group-item media d-flex" @click="onVideoSelect">
     <img class="mr-3" :src="thumbnailUrl" alt />
     <div class="media-body">
       <h5 class="mt-0 mb-1">{{ video.snippet.title }}</h5>
@@ -28,7 +28,6 @@ export default {
 
 <style scoped>
 li {
-  display: flex;
   cursor: pointer;
 }
 li:hover {

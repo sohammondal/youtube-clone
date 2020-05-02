@@ -1,12 +1,14 @@
 <template>
-  <ul class="list-group">
-    <VideoListItem
-      v-for="video in videos"
-      :key="video.etag"
-      :video="video"
-      @videoSelect="onVideoSelect"
-    />
-  </ul>
+  <div class="col-md-4">
+    <ul class="list-group">
+      <VideoListItem
+        v-for="video in videos"
+        :key="video.etag"
+        :video="video"
+        @videoSelect="onVideoSelect"
+      />
+    </ul>
+  </div>
 </template>
 
 <script>
